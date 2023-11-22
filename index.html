@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RAVSim: Run-Time Analysis and Visualization Simulator</title>
+  
+  <!-- Bootstrap -->
+  
+<link href="css/css2/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+
+  <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+  <link href="css/custom.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+
+  <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+  <!-- Bootstrap core CSS -->
+  <link href="css/css/bootstrap.min.css" rel="stylesheet">
+
+<link href="css/css2/style.css" rel="stylesheet" type="text/css" media="all" />
+<!-- font-awesome-icons -->
+
+  <style>
+    body {
+      background: rgb(255, 255, 255) no-repeat fixed top left;
+      font-family: 'Open Sans', sans-serif;
+    }
+  </style>
+
+</head>
+<!-- cover -->
+<section>
+  <div class="jumbotron text-center mt-0">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h2>RAVSim v2.0: Run-Time Analysis and Visualization Simulator for SNN
+          </h2>
+          <h4 style="color:#5a6268;">under-review</h4>
+          <hr>
+          <h6>
+            <a href="https://github.com/Rao-Sanaullah" target="_blank">Sanaullah</a><sup> 1*</sup>,
+            <!-- <a href="#top">Shamini Koravuna</a><sup>2</sup>, -->
+			<a href="#top">Ulrich Rückert</a><sup> 2</sup>,
+            <a href="#top">Thorsten Jungeblut</a><sup> 1</sup>
+          </h6>
+          * Corresponding Author: Sanaullah
+		            <br>
+          <p style="font-size: 15px;">
+		  
+			  <sup>1 </sup>Industrial Internet of Things, Hochschule Bielefeld &nbsp;&nbsp;
+			  <sup>2 </sup>Cognitronics & Sensor Systems, Universität Bielefeld
+			</p>
+
+
+          <div class="row justify-content-center">
+            <div class="column">
+              <p class="mb-5"><a class="btn btn-large btn-light"
+                  href="#"
+                  role="button" target="_blank">
+                  <i class="fa fa-file"></i> Paper (under-review)</a> </p>
+            </div>
+
+            <div class="column">
+              <p class="mb-5"><a class="btn btn-large btn-light" href="https://github.com/Rao-Sanaullah/RAVSim"
+                  role="button" target="_blank">
+                  <i class="fa fa-github-alt"></i> Code</a> </p>
+            </div>
+			
+			<div class="column">
+				<p class="mb-5">
+					<a class="btn btn-large btn-light" href="https://www.ni.com/de/support/downloads/tools-network/download.run-time-analysis-and-visualization-simulator--ravsim-.html#443936"
+					role="button" target="_blank">
+					<i class="fa fa-github-alt"></i> Simulator</a> 
+				</p>
+            </div>
+			
+              <div class="column">
+                <p class="mb-5"><a class="btn btn-large btn-light"
+                  href="files/RAVSim_v2..0_usermanual.pdf" role="button" target="_blank">
+                    <i class="fa fa-file"></i> Supplementary </a> </p>
+              </div>
+			  
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- abstract -->
+
+<div class="container">
+    <div class="row">
+	    <section class="hand-crafted">
+			<h3 class="w3l_header w3_agileits_header"><span>Abstract</span></h3>
+			<div class="col-md-12 wthree_services_grid_left">
+				<p style="text-align: justify;"> 	
+					RAVSim, short for Run-time Analyzing and Visualization Simulator, is an interactive tool designed for the analysis and simulation of spiking neural network models. 
+					Developed on the LabVIEW (Laboratory Virtual Instrument Engineering Workbench) platform, RAVSim uses a multi-core architecture to provide users with a versatile 
+					environment for exploring the behavior of spiking neural networks.				
+				</p>
+			</div>
+		</section>
+	</div>
+</div>
+
+<!-- WHAT IS RAVSIM OFFERING -->
+
+	<div class="container">
+		<div class="col-md-12 wthree_services_grid_right">
+			<div class="col-md-12 ">
+				<video width="100%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="" id="header_vid">
+					<source src="videos/top.mp4" type="video/mp4">
+				</video>
+				<div class="clearfix"> </div>
+				<br><br>
+				<div class="col-md-12 wthree_services_grid_left">
+					<h3 class="w3l_header w3_agileits_header">What is <span>RAVSim</span> Offering</h3>
+					<p style="text-align: justify;"> 
+						RAVSim offers both deterministic (by solving Ordinary Differential Equations (ODEs) and stochastic (using stochastic leaky integrate-and-fire (LIF) neurons 
+						algorithm) simulations. This dual simulation capability enables users to gain a comprehensive understanding of spiking neural network dynamics through various 
+						approaches. What sets RAVSim apart from other tools is its unique ability to execute, analyze, extract, and validate models using image-based datasets. 
+						This empowers users not only to analyze and simulate spiking neural networks but also to create custom datasets tailored to their specific image pixel, quality, 
+						and extension preferences.
+					</p>
+
+					<p style="text-align: justify;"> 
+						<div class="col-md-7 wthree_services_grid_left">
+							<h3>A Run-time <span>VI</span> </h3>
+							<p style="text-align: justify;"> 
+								A run-time VI offers three different WTA Networks, List of conditions: <br>
+								1- Fully connected network <br>
+								2- source != target index neurons <br>
+								3- source == target index neurons <br>
+								Also, a mixed signal plot for a better understanding of neuron communication.
+							</p>
+						</div>
+						<br>
+						<div class="col-md-5 wthree_services_grid_right">
+							<div class="columns is-centered">
+								<img style="width: 100%;" src="images/1.png">
+							</div>
+						</div>
+						<br>					
+					</p>
+
+					<p style="text-align: justify;"> 
+						<div class="col-md-7 wthree_services_grid_left">
+							<br>
+							<h3>Dataset Preprocessing <span>VI</span> </h3>
+							<p style="text-align: justify;"> 	 
+								Within dataset preprocess VI, users are allowed to use downloaded images for creating a scalable dataset. 
+								This flexibility includes the ability to use images with varying extensions, sizes, and qualities, pixel to the user's specific requirements. 
+								The tool supports a wide variety of image formats, accommodating datasets that suit diverse research and application needs.
+							</p>							
+						</div>
+						<br>
+						<div class="col-md-5 wthree_services_grid_right">
+							<br>
+							<div class="columns is-centered">
+								<img style="width: 100%;" src="images/4.jpg">
+							</div>
+						</div>
+						<br>
+					</p>
+
+					<p style="text-align: justify;"> 
+						<div class="col-md-7 wthree_services_grid_left">
+							<br>
+							<h3>Image Classification <span>VI</span> </h3>
+							<p style="text-align: justify;"> 		
+								RAVSim has recently introduced new features to enhance the user experience. It now offers a convenient option to generate 
+								weights for your spiking neural network models using image classification training. This feature eliminates the need for complex coding; you can simply utilize 
+								RAVSim to train your model and generate the required weights effortlessly.
+							</p>	
+						</div>
+						<br>
+						<div class="col-md-5 wthree_services_grid_right">
+							<br>
+							<div class="columns is-centered">
+								<img style="width: 100%;" src="images/2.png">
+							</div>
+						</div>
+						<br>
+					</p>
+				
+					<p style="text-align: justify;"> 
+						<div class="col-md-7 wthree_services_grid_left">
+							<br>
+							<h3>SNN Models Comparison <span>VI</span> </h3>
+							<p style="text-align: justify;"> 	
+								In addition to weight generation, RAVSim facilitates the comparison of different spiking neural network models. Users can dynamically update sets of parameter 
+								values for each model at runtime and obtain comparative results. This functionality aids in identifying the most suitable model for your specific spiking neural 
+								network application.
+							</p>
+						</div>
+						<br>
+						<div class="col-md-5 wthree_services_grid_right">
+							<br>
+							<br>
+							<div class="columns is-centered">
+								<img style="width: 100%;" src="images/3.png">
+							</div>
+						</div>
+						<br>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+		<h3 class="w3l_header w3_agileits_header">RAVSim<span> Introduction</span></h3>
+		<br><br>
+			<div class="col-md-12 wthree_services_grid_left">				
+				<div class="row justify-content-center" style="align-items:center; display:flex;">
+					<iframe src="https://www.youtube.com/embed/yG-Z7Zi5YmA?autoplay=1&mute=1"  width="740" height="350" frameborder="0" 
+					allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+			</div>
+		</div>
+    </div>
+  </div>
+</section>
+
+<!-- PRACTICAL DEMONSTRATION -->
+
+<br><br><br>
+
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+		<h3 class="w3l_header w3_agileits_header">Practical<span> Demonstration</span></h3>
+			<div class="col-md-12 wthree_services_grid_left">
+				<p style="text-align: justify;"> 
+					The RAVSim is an open-source simulator and it is available publicly at 
+					<a href="https://www.ni.com/de-de/support/downloads/tools-network/download.run-time-analysis-and-visualization-simulator--ravsim-.html#443936/">"Here"</a>
+					(RAVSim v2.0 is under-review by LABView team). 
+					To learn how to effectively use this tool at runtime experiments, 
+					this document <a href="https://github.com/Rao-Sanaullah/RAVSim/blob/main/User-Manual/RAVSim_v2..0_usermanual.pdf/">document</a>
+					provides a comprehensive guide on using RAVSim for performing run-time experiments.:
+				</p>
+				
+				<h3 class="w3l_header w3_agileits_header"><span>RAVSim v1.0 </span>Demonstration</h3>
+		        <br>
+				<h4 class="title is-5">YouTube Source</h4>
+		        <br>
+				<div class="row justify-content-center" style="align-items:center; display:flex;">
+					<iframe src="https://www.youtube.com/embed/Ozv0MXXj89Y?autoplay=1&mute=1"  width="740" height="350" frameborder="0" 
+					allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+		  		
+				<br><br><br>
+				
+				<h3 class="w3l_header w3_agileits_header"><span>RAVSim v2.0 </span>Demonstration</h3>
+		        <br>
+				<h4 class="title is-5">YouTube Source</h4>
+		        <br>
+				<div class="row justify-content-center" style="align-items:center; display:flex;">
+					<iframe src="https://www.youtube.com/embed/J9UR2IUA5Bc?autoplay=1&mute=1"  width="740" height="350" frameborder="0" 
+					allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+			</div>
+		</div>
+    </div>
+  </div>
+</section>
+
+<br><br>
+
+<!-- Qualitative Results -->
+<section>
+  <div class="col-md-12 text-center">
+	<h3 class="w3l_header w3_agileits_header">Qualitative<span> Results</span></h3>
+      <hr style="margin-top:0px">
+	  
+
+      <div style="display: inline-block; text-align: left;">
+        <p style="color: #808080;">
+          <h6 class="w3l_header" style="font-size: 20px;"> Neural Model interactions during runtime </h6>
+        </p>
+      </div>
+	<div class="container">
+		<div class="row">
+			<section class="hand-crafted">
+				<div class="col-md-12 wthree_services_grid_left">
+					<p style="text-align: justify;" > 
+					The runtime interactive environment is designed to facilitate real-time adjustments to parameter values during the simulation. This live modification 
+					capability empowers users to observe the immediate effects of parameter changes, enhancing their understanding of how different variables impact the 
+					behavior of the spiking neural network.	
+					<br>
+					Moreover, when instantaneous triggering of input model concentrations to the threshold level is necessary, the neuron communication 
+					plot visually presents the real-time excitation results of the neurons.
+					<br>
+					A run-time VI offers three different WTA Networks, List of conditions:
+					<br>
+					  * Fully connected network.<br>
+					  * source != target index neurons.<br>
+					  * source == target index neurons.<br>
+					  * Also, a mixed signal plot for a better understanding of neuron communication.<br>
+					</p>					
+				</div>
+			</section>
+		</div>
+		<div class="d-flex justify-content-center ">
+			<div class="col-lg-4 col-md-6 col-sm-12 text-center">
+				<p " playsinline="" autoplay="autoplay" loop="loop" preload="" muted="" id="header_vid">
+					<video width="85%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="" id="header_vid">
+						<source src="videos/1.1.mp4" type="video/mp4">
+					</video>
+				</p>
+			</div>
+			<div class="col-lg-4 col-md-6 col-sm-12 text-center">
+					<img src="videos/1.2.jpg" alt="input" class="img-fluid">	
+			</div>
+			<div class="col-lg-4 col-md-6 col-sm-12 text-center">
+				<p " playsinline="" autoplay="autoplay" loop="loop" preload="" muted="" id="header_vid">
+					<video width="85%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="" id="header_vid">
+						<source src="videos/1.3.mp4" type="video/mp4">
+					</video>
+				</p>
+			</div>
+		</div>
+		<br>
+		<div style="display: inline-block; text-align: left;">
+			<p style="color: #808080;">
+			  * On left side - A runtime interactive environment. <br>
+			  * Center - A mixed signal plot. <br>
+			  * On right side - Different WTA Networks.<br>
+			</p>
+		</div>
+	</div>
+<br><br>
+	  
+	  
+	  
+      <!-- additional notes -->
+      <div style="display: inline-block; text-align: left;">
+        <p style="color: #808080;">
+		   <h6 class="w3l_header" style="font-size: 20px;"> Comparative Model Analysis </h6>
+        </p>
+      </div>
+	  
+	<div class="container">
+		<div class="row">
+			<section class="hand-crafted">
+				<div class="col-md-12 wthree_services_grid_left">
+					<p style="text-align: justify;" > 
+					RAVSim presents an advanced feature, allowing users to conduct a comprehensive comparative analysis of various SNN models. 
+					This feature significantly enhances the understanding of model performance and provides assistance in the selection of the 
+					most suitable model for specific SNN applications.	
+					<br>
+					The user is given the flexibility to make a choice regarding the type of model comparison they wish to perform. The options available are as follows: 
+					<br>
+
+					  * One-to-One Model Comparison - By selecting this option, the user can conduct a detailed comparative analysis between two specific neural models. 
+					  This mode is particularly valuable when pinpointing subtle differences and performance variations between individual two models is essential.<br>
+					  * All Models Comparison - Alternatively, the user can opt for the "All Models Comparison" mode, which streamlines the process of comparing all available 
+					  neural models simultaneously. This feature is especially useful when seeking an overall assessment of model performance across the entire set, making it an 
+					  efficient choice for broader evaluations and quick insights.<br>
+
+					</p>					
+
+
+				</div>
+			</section>
+		</div>
+	</div>
+
+    <div class="d-flex justify-content-center align-items-end">
+        <div class="col-lg-5 col-md-6 col-sm-12 text-center">
+			<p " playsinline="" autoplay="autoplay" loop="loop" preload="" muted="" id="header_vid">
+              	<video width="100%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="" id="header_vid">
+					<source src="videos/4.mp4" type="video/mp4">
+		   	    </video>
+            </p>
+        </div>
+    </div>
+	<br>
+    <!-- row-2 option-2 (mesh & fg rendering) -->
+    <div class="d-flex justify-content-center align-items-end">
+        <div class="col-lg-3 col-md-6 col-sm-12 text-center">
+            <img src="images/4.png" alt="input" class="img-fluid">
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12 text-center">
+			<img src="images/5.png" alt="input" class="img-fluid">	
+        </div>
+    </div>
+
+    <div class="d-flex justify-content-center align-items-end">
+        <div class="col-lg-3 col-md-6 col-sm-12 text-center">
+            <img src="images/6.png" alt="input" class="img-fluid">
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12 text-center">
+			<img src="images/7.png" alt="input" class="img-fluid">	
+        </div>
+    </div>
+	   <br>
+	   <div style="display: inline-block; text-align: left;">
+        <p style="color: #808080;">
+		  * Figure (A) - All Model Performance and Accuracy Comparison Visualization VI<br>
+		  * Figure (B) - Visualization and Result VI for Spiking Activity Comparison of All Models <br>
+		  * Figure (C) - Visualization and Result VI for Computational Complexity Comparison of All Models <br>
+		  * Figure (D) - Visualization and Result VI for Biological Plausibility Comparison of All Models <br>
+        </p>
+      </div>
+	  <br><br><br>
+
+      <div style="display: inline-block; text-align: left;">
+        <p style="color: #808080;">
+          <h6 class="w3l_header" style="font-size: 20px;"> Image Classification Task </h6>
+        </p>
+      </div>
+	<div class="container">
+		<div class="row">
+			<section class="hand-crafted">
+				<div class="col-md-12 wthree_services_grid_left">
+					<p style="text-align: justify;" > 
+					This virtual instrument serves as the gateway to the image classification simulation environment. 
+					Within this environment, users have the capability to input their preferred parameter values, crucial for the analysis and visualization of image 
+					classification processes. This functionality allows users to explore and experiment with different datasets.	
+					<br>
+					Upon completion of the analysis, the system will present the user with a comprehensive set of results and details for their review. These details include:
+					<br>
+					  * Model Accuracy: This is visualized through plot representations, providing an in-depth view of how well the model performs in the task.<br>
+					  * Testing Error Rate: The analysis also reveals the testing error rate using MSE. This metric offers the accuracy of the model's predictions.<br>
+					  * Model Execution Time: The time it takes for the model to complete the image classification task is also reported.<br>
+					  * Dataset Details: Users can access detailed information about the dataset used for the analysis.<br>
+					</p>					
+				</div>
+			</section>
+		</div>
+		<div class="d-flex justify-content-center ">
+			<div class="col-lg-5 col-md-6 col-sm-12 text-center">
+				<img src="images/8.png" alt="input" class="img-fluid">
+			</div>
+			<div class="col-lg-5 col-md-6 col-sm-12 text-center">
+				<p " playsinline="" autoplay="autoplay" loop="loop" preload="" muted="" id="header_vid">
+					<video width="85%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="" id="header_vid">
+						<source src="videos/5.mp4" type="video/mp4">
+					</video>
+				</p>
+			</div>
+		</div>
+		<div style="display: inline-block; text-align: left;">
+			<p style="color: #808080;">
+			  * On left side - Image classification VI after analysis <br>
+			  * On right side - RAVSim the weight generation feature.<br>
+			</p>
+		</div>
+		<br>
+		<br>
+		<div class="d-flex justify-content-center align-items-end">
+			<div class="col-lg-10 col-md-8 col-sm-12 text-center">
+				<img src="images/3.1.jpg" alt="input" class="img-fluid">
+			</div>
+		</div>
+
+	</div>
+
+<br><br>
+
+
+
+
+
+      <!-- additional notes -->
+      <div style="display: inline-block; text-align: left;">
+        <p style="color: #808080;">
+		   <h6 class="w3l_header" style="font-size: 20px;"> Preprocess Custom Dataset Feature </h6>
+        </p>
+      </div>
+	  
+	<div class="container">
+		<div class="row">
+			<section class="hand-crafted">
+				<div class="col-md-12 wthree_services_grid_left">
+					<p style="text-align: justify;" > 
+					Dataset preprocessing VI, offering users an adaptable platform for preprocessing custom datasets. Within dataset preprocess VI, 
+					users are allowed to use downloaded images for creating a scalable dataset. 
+					This flexibility includes the ability to use images with varying extensions, sizes, and qualities, pixel to the user's specific requirements.
+					<br>
+					* The tool supports a wide variety of image formats, accommodating datasets that suit diverse research and application needs. 
+					<br>
+					* RAVSim also includes a friendly feature that enables users to preview images both before and after creating a dataset. 
+					<br>
+					* This feature allow users can visually assess the content and quality of the images without the need to open each one individually.
+					<br>
+
+					</p>					
+
+
+				</div>
+			</section>
+		</div>
+	</div>
+
+    <div class="d-flex justify-content-center align-items-end">
+        <div class="col-lg-5 col-md-6 col-sm-12 text-center">
+			<p " playsinline="" autoplay="autoplay" loop="loop" preload="" muted="" id="header_vid">
+              	<video width="100%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="" id="header_vid">
+					<source src="videos/2.mp4" type="video/mp4">
+		   	    </video>
+            </p>
+        </div>
+    </div>
+
+
+<br><br>
+
+
+
+    <div style="display: inline-block; text-align: left;">
+        <p style="color: #808080;">
+			<h6 class="w3l_header" style="font-size: 20px;"> Standard Deviation Error Rate </h6>
+        </p>
+    </div>
+	<div class="container">
+		<div class="row">
+			<section class="hand-crafted">
+				<div class="col-md-12 wthree_services_grid_left">
+					<p style="text-align: center;" > 
+					  The standard deviation between each runtime is crucial because it allows end-users to detect invalid input values that may cause abnormal simulation times.
+					  The runtime standard deviation calculated from 10 simulation runs using different set of neurons.
+					</p>					
+				</div>
+			</section>
+		</div>
+		<div class="d-flex justify-content-center align-items-end">
+			<div class="col-lg-10 col-md-8 col-sm-12 text-center">
+				<img src="images/9.png" alt="input" class="img-fluid">
+			</div>
+		</div>
+		<br>
+		<div style="display: inline-block; text-align: left;">
+			<p style="color: #808080;">
+			  * Time taken along with an error bar expressing standard deviation<br>
+			  * sing the image classification algorithm analysis for ten different test cases.<br>
+			</p>
+		</div>
+	</div>
+	
+	
+	
+	
+	
+  </div>
+</section>
+
+<!-- citing -->
+<div class="container">
+  <div class="row ">
+    <div class="col-12">
+	<br>
+<br>
+
+      <h3>Citation</h3>
+      <hr style="margin-top:0px">
+      <pre style="background-color: #e9eeef;padding: 1.25em 1.5em">
+<code>@article{sanaullah2023exploring,
+  title={Exploring spiking neural networks: a comprehensive analysis of mathematical models and applications},
+  author={Sanaullah and Koravuna, Shamini and R{\"u}ckert, Ulrich and Jungeblut, Thorsten and others},
+  journal={Frontiers in Computational Neuroscience},
+  volume={17},
+  year={2023},
+  publisher={Frontiers Media SA}
+}</code></pre><pre style="background-color: #e9eeef;padding: 1.25em 1.5em">
+<code>@article{sanaullah2023evaluation,
+  title={Evaluation of Spiking Neural Nets-Based Image Classification Using the Runtime Simulator RAVSim.},
+  author={Sanaullah and Koravuna, Shamini and R{\"u}ckert, Ulrich and Jungeblut, Thorsten and others},
+  journal={International Journal of Neural Systems},
+  pages={2350044--2350044},
+  year={2023}
+}</code></pre><pre style="background-color: #e9eeef;padding: 1.25em 1.5em">
+<code>@inproceedings{sanaullah2022snns,
+  title={SNNs model analyzing and visualizing experimentation using RAVSim},
+  author={Sanaullah and Koravuna, Shamini and R{\"u}ckert, Ulrich and Jungeblut, Thorsten},
+  booktitle={International conference on engineering applications of neural networks},
+  pages={40--51},
+  year={2022},
+  organization={Springer}
+}</code></pre>
+    </div>
+  </div>
+</div>
+
+<!-- ack -->
+<!-- <div class="container">
+    <div class="row ">
+      <div class="col-12">
+          <h3>Acknowledgements</h3>
+          <hr style="margin-top:0px">
+          <p class="text-justify">
+          </p>
+      </div>
+    </div>
+  </div> -->
+
+
+<footer class="text-center" style="margin-bottom:10px; font-size: medium;">
+  <hr>
+<p>© 2023 IIOT Lab - Hochschule Bielefeld (HSBI). All Rights Reserved | Design by <a href="https://github.com/Rao-Sanaullah">Sanaullah</a></p>
+</footer>
+
+</body>
+
+</html>
