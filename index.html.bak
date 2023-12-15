@@ -511,7 +511,7 @@
         <div class="col-lg-5 col-md-6 col-sm-12 text-center">
 			<p " playsinline="" autoplay="autoplay" loop="loop" preload="" muted="" id="header_vid">
               	<video width="100%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="" id="header_vid">
-					<source src="videos/4.mp4" type="video/mp4">
+					<source src="videos/2.mp4" type="video/mp4">
 		   	    </video>
             </p>
         </div>
